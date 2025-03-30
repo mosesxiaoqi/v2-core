@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true
+    "target": "es5", // 指定编译后的 JavaScript 代码应该符合的 ECMAScript 标准版本
+                     // "es5" 表示编译为 ES5 语法，兼容较旧的浏览器
+    "module": "commonjs", // 指定生成的模块系统代码
+                          // - "commonjs" 适用于 Node.js 环境，使用 `require()` 和 `module.exports`
+    "strict": true, // 启用所有严格类型检查选项
+                    // - 包括 `noImplicitAny`, `strictNullChecks`, `strictFunctionTypes` 等
+                    // - 提高代码质量和类型安全性
+    "esModuleInterop": true  // 允许使用 ES 模块语法（import/export）导入 CommonJS 模块
+                             // - 使 TypeScript 的模块导入行为更接近 ES 模块规范
+    "resolveJsonModule": true // 允许在 TypeScript 文件中直接导入 JSON 文件
+                              // - 例如：`import data from './data.json'`
   }
 }
+// 这些配置适合 Node.js 项目，提供了较好的类型安全性和兼容性。
